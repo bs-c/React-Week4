@@ -3,6 +3,7 @@ import axios from "axios";
 
 import ProductModal from "./components/ProductModal";
 import DeleteModal from "./components/DeleteModal";
+import Pagination from "./components/Pagination";
 
 // API 環境變數
 const API_BASE = import.meta.env.VITE_API_BASE;
@@ -316,6 +317,9 @@ function App() {
           ))}
         </tbody>
       </table>
+
+      {/* 分頁元件 */}
+      <Pagination pagination={pagination} getProducts={getProducts} />
 
       {/* 新增/編輯 Modal */}
       <ProductModal
